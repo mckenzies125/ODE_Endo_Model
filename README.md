@@ -58,37 +58,37 @@ The model then feeds total lesion volume back into the estradiol equation, allow
 
 Proliferative lesion-cell growth is modeled as:
 
-\[
+$$
 \frac{dM_{\chi proL}}{dt}
 =
 \mu_{proL}M_{\chi proL}
 -
 \mu_{secL}M_{\chi proL}
-\]
+$$
 
 Secretory lesion-cell growth is modeled as:
 
-\[
+$$
 \frac{dM_{\chi secL}}{dt}
 =
 Y_{\chi sec,\chi proL}\mu_{secL}M_{\chi proL}
 -
 \dot{m}_{6L}w_{\chi sec,6L}
-\]
+$$
 
 Cellular-product dynamics are modeled as:
 
-\[
+$$
 \frac{dM_{\chi pL}}{dt}
 =
 q_{pL}M_{\chi secL}
 -
 \dot{m}_{6L}w_{p,6L}
-\]
+$$
 
 Total lesion volume is calculated as:
 
-\[
+$$
 V_{TL}
 =
 \frac{M_{\chi proL}}{\rho_{\chi proL}}
@@ -96,22 +96,22 @@ V_{TL}
 \frac{M_{\chi secL}}{\rho_{\chi secL}}
 +
 \frac{M_{\chi pL}}{\rho_{\chi pL}}
-\]
+$$
 
 The original estradiol equation was then extended to incorporate lesion-associated estradiol production:
 
-\[
+$$
 E2 =
 e_0 + e_1GrF + e_2DomF + e_3Lut_4 + e_4V_{TL} + e_5
-\]
+$$
 
 where:
 
-- \(V_{TL}\) = total endometriosis lesion volume
-- \(e_4\) = rate of estradiol secretion associated with lesions
-- \(e_5\) = exogenous estradiol suppression term
+- $$V_{TL}$$ = total endometriosis lesion volume
+- $$e_4$$ = rate of estradiol secretion associated with lesions
+- $$e_5$$ = exogenous estradiol suppression term
 
-The \(e_4V_{TL}\) term creates the central feedback mechanism of the proposed model.
+The $$e_4V_{TL}$$ term creates the central feedback mechanism of the proposed model.
 
 ## Implementation
 
@@ -169,9 +169,9 @@ The model was also used to simulate periodic exogenous estradiol suppression.
 
 The suppression parameter was set to:
 
-- \(e_5 = -12.5\) during days **1000–1030**
-- \(e_5 = -10\) during days **2000–2030**
-- \(e_5 = -10\) during days **3000–3030**
+- $$e_5 = -12.5$$ during days **1000–1030**
+- $$e_5 = -10$$ during days **2000–2030**
+- $$e_5 = -10$$ during days **3000–3030**
 
 During each simulated suppression period, estradiol levels decreased.
 
